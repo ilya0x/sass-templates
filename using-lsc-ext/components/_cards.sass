@@ -1,0 +1,15 @@
+//* import (with @use) theme files to setup style cards here
+@use '../theme' as t
+    
+.card
+    font-size: t.$font-size
+    color: t.$blue
+
+    padding: t.$padding
+
+    //* media queries can be done as nested within cards
+    @media (min-width: 45em)
+        padding: 2em
+        
+
+

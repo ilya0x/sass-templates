@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  font-size: 1.5rem;
+  color: #0000ff;
+  padding: 1em;
+}
+@media (min-width: 45em) {
+  .card {
+    padding: 2em;
+  }
+}
+
+body {
+  background: #000000;
+  font-weight: 400;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.main .main__paragraph {
+  font-weight: 800;
+}
+.main .main__paragraph:hover {
+  color: pink;
+}
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+.light {
+  background: white;
+  color: black;
+}/*# sourceMappingURL=main.css.map */

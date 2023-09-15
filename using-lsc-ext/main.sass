@@ -1,0 +1,51 @@
+
+//! does NOT need file extension:
+@use 'components' as c
+@use 'theme' as t
+  
+@function weight($weight-name)
+  @return map-get(c.$font-weights, $weight-name)
+
+@mixin flexCenter
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin theme($light-theme: true)
+  @if $light-theme
+    //! light theme styles
+    background: lighten(c.$variable-one, $amount: 100%)
+    color: darken(c.$variable-two, $amount: 100%)
+
+@mixin mobile
+  @media (max-width: c.$mobile)
+    @content
+
+
+body
+  background: c.$variable-one
+  font-weight: map-get(c.$font-weights, regular)
+
+
+.main
+  @include flexCenter
+  //! "mixes in" flex related snippet of style
+  width: 90%
+  margin: 0 auto
+
+  #{&}__paragraph
+    //! "&" = the parent (ie .main). Use interpolation with "#" to wrap "&" to get everything before it
+    font-weight: weight(bold)
+    //! using function and passing in the font-weight choice from variables partial file
+
+    &:hover
+      color: c.$variable-three
+    
+
+  @include mobile
+    flex-direction: column
+
+    
+.light
+  @include theme($light-theme: true)
+
