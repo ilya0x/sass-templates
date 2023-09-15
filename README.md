@@ -1,4 +1,4 @@
-# ![sass5-logo](/images/sass-5.png) SASS Notes
+# ![sass5-logo](/images/sass-5.png) Sass Templates and Notes
 
 ### Todos
 
