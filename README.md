@@ -1,7 +1,8 @@
-# ![sass5-logo](/images/sass-5.png) Sass Templates and Notes
+# ![sass5-logo](/images/sass5-s-30.png) Sass
 
 ### Todos
 
+- [ ] Change layout to standardize with HTML and CSS README files
 - [ ] Convert all code to code blocks
 - [ ] Create Toggle for all Benefits
 
