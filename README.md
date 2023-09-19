@@ -2,7 +2,6 @@
 
 TODO:
 
-- [ ] Change layout to standardize with HTML and CSS README files
 - [ ] Convert all code to code blocks
 - [ ] Create Toggle for all Benefits
 
