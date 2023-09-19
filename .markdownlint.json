@@ -1,5 +1,14 @@
 {
   "MD033": {
-    "allowed_elements": ["br", "b", "i", "h3", "details", "summary", "h2"]
+    "allowed_elements": [
+      "br", 
+      "b", 
+      "i", 
+      "h3", 
+      "details", 
+      "summary", 
+      "h2",
+      "img"
+    ]
   }
 }

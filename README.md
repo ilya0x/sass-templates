@@ -1,6 +1,6 @@
 # ![sass5-logo](/images/sass5-s-30.png) Sass
 
-### Todos
+TODO:
 
 - [ ] Change layout to standardize with HTML and CSS README files
 - [ ] Convert all code to code blocks
@@ -55,9 +55,22 @@ into the native CSS spec:</b>
     `Pythonites and YAMLites rejoice!`
 
 <br>
+
+## <img src="./images/template-20.png" alt="template"> Templates
+
 <br>
 
-## Table of Contents
+## <img src="./images/vscode-20.png" alt="Flask"> Visual Studio Code Extensions
+
+<br>
+
+## 📝Notes
+
+> These notes are updated on regular basis
+
+<br>
+
+### Table of Contents
 
 - <b>[SCSS vs SASS](#scss-vs-sass)</b>
 - <b>[Generated Files using Live Sass Compiler extension](#generated-files-using-live-sass-compiler-extension)</b>
@@ -74,7 +87,7 @@ into the native CSS spec:</b>
 <br>
 <br>
 
-## SCSS vs SASS
+### SCSS vs SASS
 
 - SCSS - Sassy CSS, SCSS Syntax: uses curly braces & semicolons same as CSS
 - original Sass: Indented Syntax: uses indentation, .sass extension
@@ -89,7 +102,7 @@ into the native CSS spec:</b>
 <br>
 <br>
 
-## Generated Files using Live Sass Compiler extension
+### Generated Files using Live Sass Compiler extension
 
 - creates the .css file and .css.map file:
   - do not edit the generated .css as it gets overwritten every time its compiled.
@@ -107,7 +120,7 @@ into the native CSS spec:</b>
 <br>
 <br>
 
-## SCSS Variables
+### SCSS Variables
 
 ```scss
 $variable-one: #000000
@@ -124,7 +137,7 @@ body
 <br>
 <br>
 
-## Maps
+### Maps
 
 Using a variable, assign key-value pairs in parentheses:
 
@@ -148,7 +161,7 @@ body
 <br>
 <br>
 
-## Nesting
+### Nesting
 
 - styling an html element that is inside a main html element, making the style
   apply only within that element, not globally.
@@ -177,7 +190,7 @@ Example:
 <br>
 <br>
 
-## Separating files using Sass Module System
+### Separating files using Sass Module System
 
 Use `@use` and `@forward`
 
@@ -199,26 +212,26 @@ Use `@use` and `@forward`
 <br>
 <br>
 
-## Sass File Structure
+### Sass File Structure
 
 > This is my Sass file structure. There are many like it, but this one is mine.
 
 📂sass<br>
  ┣ 📂components<br>
- ┃ ┣ ![sass5-logo](/images/sass-5.png)_cards.sass<br>
- ┃ ┣ ![sass5-logo](/images/sass-5.png)_mixins.sass<br>
- ┃ ┣ ![sass5-logo](/images/sass-5.png)_resets.sass<br>
- ┃ ┗ ![sass5-logo](/images/sass-5.png)_variables.sass<br>
- ┃ ┗ ![sass5-logo](/images/sass-5.png)_functions.sass<br>
- ┃ ┗ ![sass5-logo](/images/sass-5.png)_index.sass<br>
+ ┃ ┣ ![sass5-logo](/images/sass5-s-15.png)_cards.sass<br>
+ ┃ ┣ ![sass5-logo](/images/sass5-s-15.png)_mixins.sass<br>
+ ┃ ┣ ![sass5-logo](/images/sass5-s-15.png)_resets.sass<br>
+ ┃ ┗ ![sass5-logo](/images/sass5-s-15.png)_variables.sass<br>
+ ┃ ┗ ![sass5-logo](/images/sass5-s-15.png)_functions.sass<br>
+ ┃ ┗ ![sass5-logo](/images/sass5-s-15.png)_index.sass<br>
  ┣ 📂theme<br>
- ┃ ┣ ![sass5-logo](/images/sass-5.png)_colors.sass<br>
- ┃ ┣ ![sass5-logo](/images/sass-5.png)_fonts.sass<br>
- ┃ ┗ ![sass5-logo](/images/sass-5.png)_spacing.sass<br>
- ┃ ┣ ![sass5-logo](/images/sass-5.png)_index.sass<br>
- ┣ ![sass5-logo](/images/css3.png)main.css `-generated with` [Live Sass Compiler](https://github.com/ilya0x/My-Favorite-Visual-Studio-Code-Extensions#-live-sass-compiler)<br>
- ┣ ![sass5-logo](/images/css3.png)main.css.map `-generated with` [Live Sass Compiler](https://github.com/ilya0x/My-Favorite-Visual-Studio-Code-Extensions#-live-sass-compiler)<br>
- ┗ ![sass5-logo](/images/sass-5.png)main.sass<br>
+ ┃ ┣ ![sass5-logo](/images/sass5-s-15.png)_colors.sass<br>
+ ┃ ┣ ![sass5-logo](/images/sass5-s-15.png)_fonts.sass<br>
+ ┃ ┗ ![sass5-logo](/images/sass5-s-15.png)_spacing.sass<br>
+ ┃ ┣ ![sass5-logo](/images/sass5-s-15.png)_index.sass<br>
+ ┣ ![sass5-logo](/images/css3-15.png)main.css <i>(generated with [Live Sass Compiler](https://github.com/ilya0x/My-Favorite-Visual-Studio-Code-Extensions#-live-sass-compiler))</i><br>
+ ┣ ![sass5-logo](/images/css3-15.png)main.css.map <i>(generated with [Live Sass Compiler](https://github.com/ilya0x/My-Favorite-Visual-Studio-Code-Extensions#-live-sass-compiler))</i><br>
+ ┗ ![sass5-logo](/images/sass5-s-15.png)main.sass<br>
 
 <br>
 <br>
@@ -227,7 +240,7 @@ Use `@use` and `@forward`
 <br>
 <br>
 
-## Functions
+### Functions
 
 - Compute and return values
 
