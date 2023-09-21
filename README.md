@@ -4,7 +4,6 @@
 
 <img src="images/oprah.jpg" height=150>
 <br>
-<br>
 
 Benefits for continuing to use SASS as many preprocessor features get integrated
 into the native CSS spec:
@@ -103,7 +102,7 @@ FLEXBOX Layout
 
 - <b>[SCSS vs SASS](#scss-vs-sass)</b>
 - <b>[Generated Files using Live Sass Compiler extension](#generated-files-using-live-sass-compiler-extension)</b>
-- <b>[Sass Variables](#scss-variables)</b>
+- <b>[Sass Variables](#sass-variables)</b>
 - <b>[Maps](#maps)</b>
 - <b>[Nesting](#nesting)</b>
 - <b>[Separating files using Sass Module System](#separating-files-using-sass-module-system)</b>
