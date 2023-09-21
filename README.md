@@ -294,7 +294,7 @@ font-weight: weight(bold)
 <br>
 <br>
 
-## Mixin
+### Mixin
 
 - Define Styles
 - use `@mixin` to create snippets of css that can be "mixed into" any style
@@ -354,7 +354,7 @@ added `$mobile: 800px;` to `_variables.scss`
 <br>
 <br>
 
-## Extend
+### Extend
 
 - extend a class with `@extend` to have its properties applied to the parent class
 
@@ -385,7 +385,7 @@ Example:
 <br>
 <br>
 
-## Math Operations
+### Math Operations
 
 - does NOT need `calc()` function
 - has to be same type (%, px, etc.)
