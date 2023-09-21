@@ -5,6 +5,7 @@
 }
 
 .card {
+  display: block;
   font-size: 1.5rem;
   color: #0000ff;
   padding: 1em;

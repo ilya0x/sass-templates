@@ -1,8 +1,13 @@
+//* order of @use:
+//* variables & functions
+//* base & layout
+//* colors
+//* components (buttons, card, navbar)
+//* utilities (margin, padding, opacity)
 
-//! does NOT need file extension:
+  //! does NOT need file extension:
 @use 'components' as c
-@use 'theme' as t
-  
+
 @function weight($weight-name)
   @return map-get(c.$font-weights, $weight-name)
 
@@ -21,11 +26,9 @@
   @media (max-width: c.$mobile)
     @content
 
-
 body
   background: c.$variable-one
   font-weight: map-get(c.$font-weights, regular)
-
 
 .main
   @include flexCenter
@@ -40,12 +43,9 @@ body
 
     &:hover
       color: c.$variable-three
-    
 
   @include mobile
     flex-direction: column
 
-    
 .light
   @include theme($light-theme: true)
-

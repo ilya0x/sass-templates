@@ -84,6 +84,8 @@ FLEXBOX Layout
 <b>[Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass)
 </b> - Compile Sass or Scss to CSS at realtime.
 
+> The Live Sass Compiler is key to a happy Sassy life!
+
 <b>[Sass (.sass only)](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented)
 </b> - Indented Sass syntax Highlighting, Autocomplete & Formatter
 
@@ -105,7 +107,7 @@ FLEXBOX Layout
 - <b>[Sass Variables](#sass-variables)</b>
 - <b>[Maps](#maps)</b>
 - <b>[Nesting](#nesting)</b>
-- <b>[Separating files using Sass Module System](#separating-files-using-sass-module-system)</b>
+- <b>[Partials](#partials)</b>
 - <b>[Sass File Structure](#sass-file-structure)</b>
 - <b>[Functions](#functions)</b>
 - <b>[Mixin](#mixin)</b>
@@ -149,6 +151,11 @@ FLEXBOX Layout
 <br>
 
 ### Sass Variables
+
+- Setting up variables for attributes allows you to keep all the assignments in
+  one place and reference the variables anywhere needed.
+- The `variables.sass` can then be made as separate file to keep the variables list
+  out of the way in the Sass source file.
 
 ```scss
 $variable-one: #000000
@@ -218,7 +225,9 @@ Example:
 <br>
 <br>
 
-### Separating files using Sass Module System
+### Partials
+
+Separating files using Sass Module System:
 
 Use `@use` and `@forward`
 
@@ -233,7 +242,8 @@ Use `@use` and `@forward`
   - it prevents collisions by requiring specified namespace:<br>
   `file-name.$style-name` rather than just `$style-name`
 
-<br>
+- Order matters! If a file depends on a value declared in another file, then it
+  must be bellow the other file.<br>
 <br>
 
 [Back to Table of Contents](#table-of-contents)
