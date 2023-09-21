@@ -1,14 +1,13 @@
 # ![sass5-logo](/images/sass5-s-30.png) Sass
 
-TODO:
-
-- [ ] Convert all code to code blocks
-- [ ] Create Toggle for all Benefits
-
 <br>
 
-<b>Benefits for continuing to use SASS as many preprocessor features get integrated
-into the native CSS spec:</b>
+<img src="images/oprah.jpg" height=150>
+<br>
+<br>
+
+Benefits for continuing to use SASS as many preprocessor features get integrated
+into the native CSS spec:
 
 <details>
 <summary><b>Sass Module System</b></summary>
@@ -27,39 +26,70 @@ into the native CSS spec:</b>
 
 </details>
 
-<br>
+<details>
+<summary><b>Mixin</b></summary>
 
-- Mixin:
-  - none of the `@mixin` functionality is present in native CSS
-  - no plans for integration
+- none of the `@mixin` functionality is present in native CSS
+- no plans for integration
 
-- Loops:
-  - allows the ability to create custom flexbox grids and make them responsive
-    with `@media` queries
-  - `@for $i from 0 through 9` to iterate over `i` elements
-  - no plans for integration
+</details>
 
-- `@if` `@else if` `@else` statements:
-  - Example: use to set line spacing depending on font size
-  - can be used for custom messaging for debugging
-  - no plans for integration
+<details>
+<summary><b>Loops</b></summary>
 
-- Nesting:
-  - being able to use multiple selectors, `&-name`, is not supported in CSS yet.
-  - planed to be integrated into native CSS spec.
+- allows the ability to create custom flexbox grids and make them responsive
+  with `@media` queries
+- `@for $i from 0 through 9` to iterate over `i` elements
+- no plans for integration
 
-- Indentations use:
-  - using `.sass` file extension we can use indentation instead
+</details>
+
+<details>
+<summary><b><code>@if</code> <code>@else if</code> <code>@else</code> statements</b></summary>
+
+- Example: use to set line spacing depending on font size
+- can be used for custom messaging for debugging
+- no plans for integration
+
+</details>
+
+<details>
+<summary><b>Nesting</b></summary>
+
+- being able to use multiple selectors, `&-name`, is not supported in CSS yet.
+- planed to be integrated into native CSS spec.
+
+</details>
+
+<details>
+<summary><b>Indentations use</b></summary>
+
+- using `.sass` file extension we can use indentation instead
     of curly brackets and semicolons!<br>
-    `Pythonites and YAMLites rejoice!`
+
+> Pythonites and YAMLites rejoice!
+
+</details>
 
 <br>
 
 ## <img src="./images/template-20.png" alt="template"> Templates
 
+<b>[FLEXBOX Layout](/flexbox-photo-gallery-sass/)</b> - Photo Gallery using
+FLEXBOX Layout
+
 <br>
 
 ## <img src="./images/vscode-20.png" alt="Flask"> Visual Studio Code Extensions
+
+<b>[Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass)
+</b> - Compile Sass or Scss to CSS at realtime.
+
+<b>[Sass (.sass only)](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented)
+</b> - Indented Sass syntax Highlighting, Autocomplete & Formatter
+
+<b>[SCSS Formatter](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
+</b> - Formats .scss files
 
 <br>
 
@@ -271,53 +301,51 @@ font-weight: weight(bold)
 
 Example:
 
-`@mixin flexCenter {`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`display: flex;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`align-items: center;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`justify-content: center;`<br>
-`}`<br>
+``` scss
+@mixin flexCenter
+  display: flex
+  align-items: center
+  justify-content: center
 
-`.main {`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`@include flexCenter;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`//! "mixes in" flex related snippet of style`<br>
+.main
+  @include flexCenter
+  // `mixes in` flex related snippet of style
 
-&nbsp;&nbsp;&nbsp;&nbsp;`width: 80%;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`margin: 0 auto;`<br>
-`}`<br>
+  width: 80%
+  margin: 0 auto
+```
 
-Example: choosing between a light and dark theme
+<br>
 
-`@mixin theme($light-theme: true) {` (assign Boolean value to variable)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`@if $light-theme {` (if light-theme is true)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(light theme styles:)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`background:
-lighten($variable-one, $amount: 100%);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`color: darken($variable-two,
-$amount: 100%);`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`}`<br>
-`}`<br>
+Example: choosing between a light and dark theme:
 
-`.light {`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`@include theme($light-theme: true);`<br>
-`}`<br>
+```scss
+@mixin theme($light-theme: true)
+// assign Boolean value to variable
+  @if $light-theme
+  // if light-theme is true
+    // light theme styles:
+    background: lighten($variable-one, $amount: 100%)
+    color: darken($variable-two, $amount: 100%)
+
+.light
+  @include theme($light-theme: true)
+```
 
 Example: Media Query - change layout depending on window size
 
 added `$mobile: 800px;` to `_variables.scss`
 
-`@mixin mobile {`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`@media (max-width: $mobile) {`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`@content;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`}`<br>
-`}`<br>
+``` scss
+@mixin mobile
+  @media (max-width: $mobile)
+    @content
 
-`.main {`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`...`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`@include mobile{`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`flex-direction: column;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`}`<br>
-`}`
-<br>
+.main
+  ...
+  @include mobile
+    flex-direction: column
+```
 
 <br>
 <br>
@@ -332,26 +360,23 @@ added `$mobile: 800px;` to `_variables.scss`
 
 Example:
 
-`.main {`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`...`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`#{&}-paragraph1;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`font-weight: weight(bold);`<br>
+``` scss
+.main
+  ...
+  #{&}-paragraph1
+    font-weight: weight(bold)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`&:hover {`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`color: pink;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`}`<br>
+    :hover
+      color: pink
 
-&nbsp;&nbsp;&nbsp;&nbsp;`#{&}-paragraph2;`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`@extend .main-paragraph1;`
-extends all styles from -paragraph1<br>
+  #{&}-paragraph2
+    @extend .main-paragraph1 
+    // extends all styles from -paragraph1
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`&:hover {`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`color:
-blue;` supersedes the extended style<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br>
+    &:hover
+      color: blue 
+      // supersedes the extended style
+```
 
 <br>
 <br>
