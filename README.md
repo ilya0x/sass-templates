@@ -103,7 +103,7 @@ FLEXBOX Layout
 
 - <b>[SCSS vs SASS](#scss-vs-sass)</b>
 - <b>[Generated Files using Live Sass Compiler extension](#generated-files-using-live-sass-compiler-extension)</b>
-- <b>[SCSS Variables](#scss-variables)</b>
+- <b>[Sass Variables](#scss-variables)</b>
 - <b>[Maps](#maps)</b>
 - <b>[Nesting](#nesting)</b>
 - <b>[Separating files using Sass Module System](#separating-files-using-sass-module-system)</b>
@@ -116,7 +116,7 @@ FLEXBOX Layout
 <br>
 <br>
 
-### SCSS vs SASS
+### .SCSS vs .SASS
 
 - SCSS - Sassy CSS, SCSS Syntax: uses curly braces & semicolons same as CSS
 - original Sass: Indented Syntax: uses indentation, .sass extension
@@ -149,7 +149,7 @@ FLEXBOX Layout
 <br>
 <br>
 
-### SCSS Variables
+### Sass Variables
 
 ```scss
 $variable-one: #000000
