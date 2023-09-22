@@ -1,8 +1,14 @@
 # ![sass5-logo](/images/sass5-s-30.png) Sass
 
+Sass is a CSS preprocessor that enhances the capabilities of standard CSS. It
+introduces features like variables for storing values, nesting for improved
+readability, mixins for reusable code, and the ability to perform mathematical
+operations. Sass simplifies and streamlines the process of writing and
+maintaining stylesheets, making it a valuable tool for web developers.
+
 <br>
 
-<img src="images/oprah.jpg" height=150>
+<img src="images/oprah.jpg" height=150><br>
 <br>
 
 Benefits for continuing to use SASS as many preprocessor features get integrated
